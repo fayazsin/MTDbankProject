@@ -1,0 +1,50 @@
+.pricing-area {
+  background: #fafafa;
+  padding: 20px 0 70px;
+}
+/*********** section-title style **************/
+.section-title {
+  margin-bottom: 51px;
+}
+.section-title .subtitle {
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  color: teal;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+.section-title .subtitle.subtitle-thumb {
+  padding-left: 25px;
+}
+.section-title .subtitle.subtitle-thumb:after {
+  content: "";
+  position: absolute;
+  background: teal;
+  height: 10px;
+  width: 10px;
+  top: 0;
+  left: 0;
+}
+.section-title .subtitle.subtitle-thumb:before {
+  content: "";
+  position: absolute;
+  background: navy;
+  height: 10px;
+  width: 10px;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+}
+.section-title .title {
+  font-weight: 600;
+  font-size: 40px;
+  font-family: var(--body-font);
+  color: #292929;
+  margin-bottom: 23px;
+}
+.section-title p {
+  color: #768495;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
