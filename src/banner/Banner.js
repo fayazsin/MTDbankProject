@@ -4,7 +4,6 @@ import banner2 from "../images/banner2.png";
 import banner3 from "../images/banner3.png";
 import { Carousel, CarouselItem, CarouselControl } from "reactstrap";
 
-
 const items = [
   {
     src: banner1,
@@ -17,7 +16,7 @@ const items = [
   },
 ];
 
-const Banner = () => {
+const Banner = (props) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 

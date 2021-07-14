@@ -47,36 +47,71 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: "20vw",
     },
 }));
-const Header = () => {
+function Header() {
     const classes = useStyles();
+    const showAboutUs = () => {
+        const elmnt = document.getElementById("About");
+        if (elmnt) {
+            elmnt.scrollIntoView();
+        }
+    };
+    const showProduct = () => {
+        const elmnt = document.getElementById("product");
+        if (elmnt) {
+            elmnt.scrollIntoView();
+        }
+    };
+    const showPackage = () => {
+        const elmnt = document.getElementById("Package");
+        if (elmnt) {
+            elmnt.scrollIntoView();
+        }
+    };
+    const showContactUs = () => {
+        const elmnt = document.getElementById("Contactus");
+        if (elmnt) {
+            elmnt.scrollIntoView();
+        }
+    };
     return (
         <div className={classes.root}>
             <AppBar position="static">
                 <Toolbar variant="dense">
                     <Link to="/">
-                        <img className={classes.logo} src={logo} alt="" />
+                        <img className="header__logo" src={logo} alt="" />
                     </Link>
-                    <Typography variant="h6" >MTD Bank</Typography>
-                    <Button className={classes.button}>ABOUT US</Button>
-                    <Button className={classes.button}>PRODUCTS</Button>
-                    <Button className={classes.button}>PACKAGE</Button>
-                    <Button className={classes.button}>CONTACT US</Button>
-                    <div className={classes.spacer}>
-                        <Link to="/login" className={classes.headerLink}>
-                            <div className={classes.headerOption}>
-                                <span className={classes.headerLineOne}>Hello</span>
-                                <span className={classes.headerLineTwo}>Sign In</span>
-                            </div>
-                            <div className={classes.headerOption}>
-                                <span className={classes.headerLineOne}>New User</span>
-                                <span className={classes.headerLineTwo}>Registration</span>
-                            </div>
-                        </Link>
-                    </div>
+                    <Typography variant="h6" color="inherit">
+                        MTD Bank
+                    </Typography>
+                    <Button className={classes.button} onClick={showAboutUs}>
+                        About Us
+                    </Button>
+                    <Button className={classes.button} onClick={showProduct}>
+                        Product
+                    </Button>
+                    <Button className={classes.button} onClick={showPackage}>
+                        Package
+                    </Button>
+                    <Button className={classes.button} onClick={showContactUs}>
+                        Contact Us
+                    </Button>
+                    <div className={classes.spacer}></div>
+                    <Link to="/login" className="header__link">
+                        <div className="header__option">
+                            <span className="header__lineOne">Hello</span>
+                            <span className="header__lineTwo">Sign In</span>
+                        </div>
+                    </Link>
+                    <Link to="/register" className="header__link">
+                        <div className="header__option">
+                            <span className="header__lineOne">New User</span>
+                            <span className="header__lineTwo">Register</span>
+                        </div>
+                    </Link>
                 </Toolbar>
             </AppBar>
         </div>
-    )
+    );
 }
 
 export default Header
