@@ -13,10 +13,18 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
+    menuButton: {
+        marginRight: theme.spacing(2),
+    },
     button: {
-        paddingLeft: "50px",
+        marginLeft: "40px",
         color: "white",
-        fontWeight: "15px",
+        fontSize: "15px",
+        fontWeight: "Bold",
+        "&:hover": {
+            backgroundColor: "black",
+            color: "yellow",
+        },
 
 
     },
@@ -24,25 +32,7 @@ const useStyles = makeStyles((theme) => ({
         width: "50px",
         objectFit: "contain",
     },
-    headerLink: {
-        color: "white",
-        textDecoration: "none",
-        display: "flex",
-        alignItems: "right",
-    },
-    headerOption: {
-        display: "flex",
-        flexDirection: "column",
-        marginLeft: "10px",
-        marginRight: "10px",
-    },
-    headerLineOne: {
-        fontSize: "13px",
-    },
-    headerLineTwo: {
-        fontSize: "15px",
-        fontWeight: "bold",
-    },
+
     spacer: {
         paddingLeft: "20vw",
     },
@@ -50,27 +40,27 @@ const useStyles = makeStyles((theme) => ({
 function Header() {
     const classes = useStyles();
     const showAboutUs = () => {
-        const elmnt = document.getElementById("About");
+        const elmnt = document.getElementById("about");
         if (elmnt) {
-            elmnt.scrollIntoView();
+            elmnt.scrollIntoView({ behavior: "smooth" });
         }
     };
     const showProduct = () => {
         const elmnt = document.getElementById("product");
         if (elmnt) {
-            elmnt.scrollIntoView();
+            elmnt.scrollIntoView({ behavior: "smooth" });
         }
     };
     const showPackage = () => {
-        const elmnt = document.getElementById("Package");
+        const elmnt = document.getElementById("package");
         if (elmnt) {
-            elmnt.scrollIntoView();
+            elmnt.scrollIntoView({ behavior: "smooth" });
         }
     };
     const showContactUs = () => {
-        const elmnt = document.getElementById("Contactus");
+        const elmnt = document.getElementById("contactus");
         if (elmnt) {
-            elmnt.scrollIntoView();
+            elmnt.scrollIntoView({ behavior: "smooth" });
         }
     };
     return (

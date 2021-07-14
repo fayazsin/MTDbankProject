@@ -6,9 +6,10 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import PinterestIcon from "@material-ui/icons/Pinterest";
+import { Copyright } from "@material-ui/icons";
 const Footer = () => {
     return (
-        <div>
+        <div id="contactus">
             <footer className="footer-area">
                 <div className="container">
                     <div className="footer-inner">
@@ -118,7 +119,7 @@ const Footer = () => {
                         </div>
                         <div className="col-lg-6 align-self-center">
                             <div className="copy-right text-lg-right text-center">
-                                @ 2020, MTD Bank all right reserved
+                                <Copyright /> 2020, MTD Bank all right reserved
                             </div>
                         </div>
                     </div>
